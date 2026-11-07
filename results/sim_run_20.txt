@@ -1,0 +1,45 @@
+1280 episodes in 508s
+config                                 strategy                         bits/h   BER | volume | invariant: rem | remote listing | rendezvous 20m | rendezvous 2h | fixed-lag 2h | lexical (char- | UNION
+M0 incident-like                       C1 plain board                      240  0.00 | 0.00/0.27      | 1.00/1.00      | 1.00/1.00      | 0.01/0.47      | 0.01/0.47      | 0.02/0.50      | 1.00/1.00      | 1.00 (fpr 0.007)
+M0 incident-like                       C2 camouflaged board                240  0.00 | 0.00/0.22      | 1.00/1.00      | 1.00/1.00      | 0.00/0.47      | 0.01/0.47      | 0.01/0.51      | 0.00/0.49      | 1.00 (fpr 0.006)
+M0 incident-like                       C3 GET-only fabricated pages        240  0.00 | 0.00/0.26      | 0.00/0.42      | 1.00/1.00      | 0.00/0.25      | 0.05/0.40      | 0.00/0.41      | 0.00/0.53      | 1.00 (fpr 0.009)
+M0 incident-like                       C4 cache-warm probe                  94  0.15 | 1.00/1.00      | 0.00/0.36      | 0.00/0.13      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.00/0.64      | 1.00 (fpr 0.003)
+M1 deny tenant writes                  C1 plain board                        0  0.50 | 0.00/0.25      | 0.02/0.88      | 0.08/0.89      | 0.00/0.49      | 0.02/0.51      | 0.00/0.48      | 0.00/0.92      | 0.02 (fpr 0.007)
+M1 deny tenant writes                  C2 camouflaged board                  0  0.50 | 0.00/0.23      | 0.03/0.85      | 0.06/0.87      | 0.00/0.51      | 0.02/0.51      | 0.00/0.52      | 0.00/0.47      | 0.02 (fpr 0.000)
+M1 deny tenant writes                  C3 GET-only fabricated pages        240  0.00 | 0.00/0.31      | 0.00/0.39      | 1.00/1.00      | 0.00/0.27      | 0.01/0.42      | 0.00/0.43      | 0.00/0.54      | 1.00 (fpr 0.010)
+M1 deny tenant writes                  C4 cache-warm probe                  94  0.15 | 1.00/1.00      | 0.00/0.34      | 0.00/0.11      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.00/0.64      | 1.00 (fpr 0.000)
+M2 +no remote listing                  C1 plain board                        0  0.50 | 0.00/0.25      | 0.08/0.86      | 0.02/0.73      | 0.01/0.51      | 0.00/0.50      | 0.00/0.49      | 0.02/0.92      | 0.05 (fpr 0.009)
+M2 +no remote listing                  C2 camouflaged board                  0  0.50 | 0.00/0.20      | 0.05/0.87      | 0.01/0.75      | 0.02/0.52      | 0.01/0.53      | 0.00/0.47      | 0.01/0.47      | 0.01 (fpr 0.017)
+M2 +no remote listing                  C3 GET-only fabricated pages        240  0.00 | 1.00/1.00      | 0.00/0.35      | 0.00/0.40      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.02/0.70      | 1.00 (fpr 0.020)
+M2 +no remote listing                  C4 cache-warm probe                  96  0.15 | 1.00/1.00      | 0.00/0.35      | 0.00/0.12      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.00/0.64      | 1.00 (fpr 0.001)
+M3 +verified-only cache, no X-Cache    C1 plain board                        0  0.50 | 0.00/0.27      | 0.04/0.87      | 0.02/0.72      | 0.01/0.52      | 0.01/0.52      | 0.00/0.50      | 0.00/0.93      | 0.01 (fpr 0.001)
+M3 +verified-only cache, no X-Cache    C2 camouflaged board                  0  0.50 | 0.00/0.27      | 0.03/0.86      | 0.01/0.74      | 0.00/0.49      | 0.00/0.50      | 0.00/0.48      | 0.00/0.48      | 0.00 (fpr 0.003)
+M3 +verified-only cache, no X-Cache    C3 GET-only fabricated pages          0  0.51 | 1.00/1.00      | 0.00/0.34      | 0.00/0.42      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.02/0.69      | 1.00 (fpr 0.003)
+M3 +verified-only cache, no X-Cache    C4 cache-warm probe                  94  0.15 | 1.00/1.00      | 0.00/0.35      | 0.00/0.12      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.00/0.64      | 1.00 (fpr 0.001)
+M4 +per-tenant timing equalisation     C1 plain board                        0  0.50 | 0.00/0.33      | 0.02/0.87      | 0.00/0.72      | 0.00/0.54      | 0.00/0.52      | 0.00/0.52      | 0.01/0.93      | 0.00 (fpr 0.004)
+M4 +per-tenant timing equalisation     C2 camouflaged board                  0  0.50 | 0.00/0.27      | 0.06/0.86      | 0.01/0.74      | 0.00/0.54      | 0.00/0.53      | 0.00/0.54      | 0.00/0.46      | 0.01 (fpr 0.001)
+M4 +per-tenant timing equalisation     C3 GET-only fabricated pages          0  0.51 | 1.00/1.00      | 0.00/0.33      | 0.00/0.42      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.02/0.69      | 1.00 (fpr 0.000)
+M4 +per-tenant timing equalisation     C4 cache-warm probe                   0  0.50 | 1.00/1.00      | 0.00/0.35      | 0.00/0.12      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.00/0.64      | 1.00 (fpr 0.003)
+M5 fully partitioned cache             C1 plain board                        0  0.50 | 0.00/0.25      | 0.04/0.86      | 0.00/0.71      | 0.00/0.52      | 0.01/0.49      | 0.00/0.53      | 0.01/0.92      | 0.00 (fpr 0.006)
+M5 fully partitioned cache             C2 camouflaged board                  0  0.50 | 0.00/0.24      | 0.09/0.86      | 0.01/0.68      | 0.01/0.52      | 0.00/0.51      | 0.00/0.51      | 0.00/0.48      | 0.00 (fpr 0.000)
+M5 fully partitioned cache             C3 GET-only fabricated pages          0  0.51 | 1.00/1.00      | 0.00/0.35      | 0.00/0.42      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.02/0.69      | 1.00 (fpr 0.001)
+M5 fully partitioned cache             C4 cache-warm probe                   0  0.50 | 1.00/1.00      | 0.00/0.35      | 0.00/0.12      | 1.00/1.00      | 1.00/1.00      | 1.00/1.00      | 0.00/0.63      | 1.00 (fpr 0.004)
+cost:
+  M0 incident-like                       upstream=2917 latency=61ms denied=0.0000
+  M1 deny tenant writes                  upstream=2911 latency=61ms denied=0.0010
+  M2 +no remote listing                  upstream=2920 latency=61ms denied=0.0050
+  M3 +verified-only cache, no X-Cache    upstream=2916 latency=61ms denied=0.0049
+  M4 +per-tenant timing equalisation     upstream=2915 latency=114ms denied=0.0050
+  M5 fully partitioned cache             upstream=6449 latency=114ms denied=0.0050
+sweep (M3, C4):
+  bpr=8 period=60 jitter=False bits/h=94 volume=1.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=1.00 rendezvous 2=1.00 fixed-lag 2h=1.00 lexical (cha=0.00 UNION=1.00
+  bpr=8 period=60 jitter=True bits/h=91 volume=1.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=1.00 rendezvous 2=1.00 fixed-lag 2h=1.00 lexical (cha=0.00 UNION=1.00
+  bpr=4 period=60 jitter=False bits/h=46 volume=0.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=1.00 rendezvous 2=0.10 fixed-lag 2h=1.00 lexical (cha=0.01 UNION=1.00
+  bpr=4 period=60 jitter=True bits/h=45 volume=0.01 invariant: r=0.00 remote listi=0.00 rendezvous 2=1.00 rendezvous 2=0.13 fixed-lag 2h=0.99 lexical (cha=0.00 UNION=1.00
+  bpr=1 period=60 jitter=False bits/h=11 volume=0.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=0.00 rendezvous 2=0.02 fixed-lag 2h=1.00 lexical (cha=0.00 UNION=1.00
+  bpr=1 period=60 jitter=True bits/h=11 volume=0.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=0.00 rendezvous 2=0.00 fixed-lag 2h=0.00 lexical (cha=0.00 UNION=0.00
+  bpr=2 period=180 jitter=False bits/h=8 volume=0.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=0.00 rendezvous 2=0.00 fixed-lag 2h=0.92 lexical (cha=0.00 UNION=0.92
+  bpr=2 period=180 jitter=True bits/h=7 volume=0.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=0.00 rendezvous 2=0.00 fixed-lag 2h=0.00 lexical (cha=0.00 UNION=0.00
+  bpr=1 period=360 jitter=False bits/h=2 volume=0.00 invariant: r=0.01 remote listi=0.00 rendezvous 2=0.00 rendezvous 2=0.00 fixed-lag 2h=0.00 lexical (cha=0.00 UNION=0.00
+  bpr=1 period=360 jitter=True bits/h=2 volume=0.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=0.00 rendezvous 2=0.00 fixed-lag 2h=0.00 lexical (cha=0.00 UNION=0.00
+  bpr=1 period=720 jitter=True bits/h=1 volume=0.00 invariant: r=0.00 remote listi=0.00 rendezvous 2=0.00 rendezvous 2=0.00 fixed-lag 2h=0.00 lexical (cha=0.00 UNION=0.00

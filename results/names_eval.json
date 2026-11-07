@@ -1,0 +1,791 @@
+{
+ "results": [
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.9978,
+   "auroc_ci95": [
+    0.9949,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 0.9956,
+   "detector": "regex_zz",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.9978,
+   "auroc_ci95": [
+    0.9949,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 0.9956,
+   "detector": "regex_zz",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.9973,
+   "auroc_ci95": [
+    0.9961,
+    0.9984
+   ],
+   "tpr_at_1pct_fpr": 0.9418,
+   "detector": "charlm_oneclass",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.9788,
+   "auroc_ci95": [
+    0.9708,
+    0.9857
+   ],
+   "tpr_at_1pct_fpr": 0.6696,
+   "detector": "charlm_oneclass",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.951,
+   "auroc_ci95": [
+    0.9451,
+    0.9567
+   ],
+   "tpr_at_1pct_fpr": 0.1412,
+   "detector": "charlm_casefolded",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.7405,
+   "auroc_ci95": [
+    0.712,
+    0.7744
+   ],
+   "tpr_at_1pct_fpr": 0.0524,
+   "detector": "charlm_casefolded",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.9985,
+   "auroc_ci95": [
+    0.9962,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 0.9971,
+   "detector": "baseline_upper_share",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.9981,
+   "auroc_ci95": [
+    0.9953,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 0.9942,
+   "detector": "baseline_upper_share",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.2846,
+   "auroc_ci95": [
+    0.2688,
+    0.299
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (raw)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.5412,
+   "auroc_ci95": [
+    0.5047,
+    0.576
+   ],
+   "tpr_at_1pct_fpr": 0.0015,
+   "detector": "baseline_max_seg_len",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.5,
+   "auroc_ci95": [
+    0.5,
+    0.5
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "regex_zz",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.5,
+   "auroc_ci95": [
+    0.5,
+    0.5
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "regex_zz",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.9959,
+   "auroc_ci95": [
+    0.9943,
+    0.9975
+   ],
+   "tpr_at_1pct_fpr": 0.9345,
+   "detector": "charlm_oneclass",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.9724,
+   "auroc_ci95": [
+    0.9636,
+    0.9805
+   ],
+   "tpr_at_1pct_fpr": 0.5953,
+   "detector": "charlm_oneclass",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.91,
+   "auroc_ci95": [
+    0.9004,
+    0.9175
+   ],
+   "tpr_at_1pct_fpr": 0.0786,
+   "detector": "charlm_casefolded",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.6206,
+   "auroc_ci95": [
+    0.5892,
+    0.6576
+   ],
+   "tpr_at_1pct_fpr": 0.0364,
+   "detector": "charlm_casefolded",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.9985,
+   "auroc_ci95": [
+    0.9963,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 0.9971,
+   "detector": "baseline_upper_share",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.9981,
+   "auroc_ci95": [
+    0.9953,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 0.9971,
+   "detector": "baseline_upper_share",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 4737,
+   "auroc": 0.2493,
+   "auroc_ci95": [
+    0.2342,
+    0.2637
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident zz paths (convention stripped)",
+   "n_pos": 687,
+   "n_neg": 483,
+   "auroc": 0.5011,
+   "auroc_ci95": [
+    0.468,
+    0.5358
+   ],
+   "tpr_at_1pct_fpr": 0.0015,
+   "detector": "baseline_max_seg_len",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 4737,
+   "auroc": 0.5,
+   "auroc_ci95": [
+    0.5,
+    0.5
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "regex_zz",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 483,
+   "auroc": 0.5,
+   "auroc_ci95": [
+    0.5,
+    0.5
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "regex_zz",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 4737,
+   "auroc": 0.9975,
+   "auroc_ci95": [
+    0.9964,
+    0.9984
+   ],
+   "tpr_at_1pct_fpr": 0.9325,
+   "detector": "charlm_oneclass",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 483,
+   "auroc": 0.9771,
+   "auroc_ci95": [
+    0.968,
+    0.9855
+   ],
+   "tpr_at_1pct_fpr": 0.5521,
+   "detector": "charlm_oneclass",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 4737,
+   "auroc": 0.9014,
+   "auroc_ci95": [
+    0.8918,
+    0.9118
+   ],
+   "tpr_at_1pct_fpr": 0.046,
+   "detector": "charlm_casefolded",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 483,
+   "auroc": 0.5879,
+   "auroc_ci95": [
+    0.5553,
+    0.63
+   ],
+   "tpr_at_1pct_fpr": 0.0215,
+   "detector": "charlm_casefolded",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 4737,
+   "auroc": 1.0,
+   "auroc_ci95": [
+    1.0,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 1.0,
+   "detector": "baseline_upper_share",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 483,
+   "auroc": 1.0,
+   "auroc_ci95": [
+    1.0,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 1.0,
+   "detector": "baseline_upper_share",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 4737,
+   "auroc": 0.3571,
+   "auroc_ci95": [
+    0.3409,
+    0.3728
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident exfil-like zz paths (stripped)",
+   "n_pos": 326,
+   "n_neg": 483,
+   "auroc": 0.6275,
+   "auroc_ci95": [
+    0.5865,
+    0.6663
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 4737,
+   "auroc": 0.5093,
+   "auroc_ci95": [
+    0.5,
+    0.5278
+   ],
+   "tpr_at_1pct_fpr": 0.0185,
+   "detector": "regex_zz",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 483,
+   "auroc": 0.5093,
+   "auroc_ci95": [
+    0.5,
+    0.5278
+   ],
+   "tpr_at_1pct_fpr": 0.0185,
+   "detector": "regex_zz",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 4737,
+   "auroc": 0.9352,
+   "auroc_ci95": [
+    0.8962,
+    0.9656
+   ],
+   "tpr_at_1pct_fpr": 0.4444,
+   "detector": "charlm_oneclass",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 483,
+   "auroc": 0.7741,
+   "auroc_ci95": [
+    0.7013,
+    0.8447
+   ],
+   "tpr_at_1pct_fpr": 0.2037,
+   "detector": "charlm_oneclass",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 4737,
+   "auroc": 0.8931,
+   "auroc_ci95": [
+    0.8514,
+    0.9271
+   ],
+   "tpr_at_1pct_fpr": 0.2778,
+   "detector": "charlm_casefolded",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 483,
+   "auroc": 0.6742,
+   "auroc_ci95": [
+    0.5923,
+    0.7496
+   ],
+   "tpr_at_1pct_fpr": 0.037,
+   "detector": "charlm_casefolded",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 4737,
+   "auroc": 0.7901,
+   "auroc_ci95": [
+    0.7283,
+    0.8564
+   ],
+   "tpr_at_1pct_fpr": 0.5741,
+   "detector": "baseline_upper_share",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 483,
+   "auroc": 0.7352,
+   "auroc_ci95": [
+    0.6679,
+    0.8216
+   ],
+   "tpr_at_1pct_fpr": 0.537,
+   "detector": "baseline_upper_share",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 4737,
+   "auroc": 0.0713,
+   "auroc_ci95": [
+    0.0451,
+    0.0972
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "all benign"
+  },
+  {
+   "set": "incident NON-zz agent names",
+   "n_pos": 54,
+   "n_neg": 483,
+   "auroc": 0.1754,
+   "auroc_ci95": [
+    0.1162,
+    0.2281
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 4737,
+   "auroc": 0.5006,
+   "auroc_ci95": [
+    0.5,
+    0.5019
+   ],
+   "tpr_at_1pct_fpr": 0.0012,
+   "detector": "regex_zz",
+   "negatives": "all benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 483,
+   "auroc": 0.5006,
+   "auroc_ci95": [
+    0.5,
+    0.5019
+   ],
+   "tpr_at_1pct_fpr": 0.0012,
+   "detector": "regex_zz",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 4737,
+   "auroc": 0.9896,
+   "auroc_ci95": [
+    0.9859,
+    0.9927
+   ],
+   "tpr_at_1pct_fpr": 0.911,
+   "detector": "charlm_oneclass",
+   "negatives": "all benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 483,
+   "auroc": 0.9554,
+   "auroc_ci95": [
+    0.9441,
+    0.9666
+   ],
+   "tpr_at_1pct_fpr": 0.5909,
+   "detector": "charlm_oneclass",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 4737,
+   "auroc": 0.9087,
+   "auroc_ci95": [
+    0.9006,
+    0.9175
+   ],
+   "tpr_at_1pct_fpr": 0.0915,
+   "detector": "charlm_casefolded",
+   "negatives": "all benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 483,
+   "auroc": 0.6217,
+   "auroc_ci95": [
+    0.5866,
+    0.6592
+   ],
+   "tpr_at_1pct_fpr": 0.0272,
+   "detector": "charlm_casefolded",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 4737,
+   "auroc": 0.979,
+   "auroc_ci95": [
+    0.9733,
+    0.986
+   ],
+   "tpr_at_1pct_fpr": 0.9592,
+   "detector": "baseline_upper_share",
+   "negatives": "all benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 483,
+   "auroc": 0.9739,
+   "auroc_ci95": [
+    0.9644,
+    0.9818
+   ],
+   "tpr_at_1pct_fpr": 0.9567,
+   "detector": "baseline_upper_share",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 4737,
+   "auroc": 0.2288,
+   "auroc_ci95": [
+    0.2165,
+    0.2429
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "all benign"
+  },
+  {
+   "set": "all zz tokens in dataset (stripped)",
+   "n_pos": 809,
+   "n_neg": 483,
+   "auroc": 0.4753,
+   "auroc_ci95": [
+    0.4396,
+    0.5138
+   ],
+   "tpr_at_1pct_fpr": 0.0,
+   "detector": "baseline_max_seg_len",
+   "negatives": "github-mirror benign"
+  },
+  {
+   "set": "incident zz paths (stripped), grouped 5-fold CV",
+   "detector": "logreg_supervised",
+   "negatives": "benign sample",
+   "n_pos": 687,
+   "n_neg": 6000,
+   "auroc": 1.0,
+   "auroc_ci95": [
+    1.0,
+    1.0
+   ],
+   "tpr_at_1pct_fpr": 1.0
+  },
+  {
+   "set": "incident NON-zz agent names (transfer)",
+   "detector": "logreg_supervised",
+   "negatives": "benign sample",
+   "n_pos": 54,
+   "n_neg": 6000,
+   "auroc": 0.9967,
+   "tpr_at_1pct_fpr": 0.9259
+  }
+ ],
+ "examples": {
+  "nonzz_lowest_scores (evade)": [
+   [
+    2.1645300422305684,
+    "z/"
+   ],
+   [
+    2.3428348472646436,
+    "y/"
+   ],
+   [
+    3.2436078186723667,
+    "y834141/"
+   ],
+   [
+    3.9700667585853813,
+    "c6p/"
+   ],
+   [
+    4.405384084602279,
+    "fb46883proptest424718068/"
+   ],
+   [
+    4.646183260369995,
+    "x7nodecommit_1783809000_a1/"
+   ],
+   [
+    4.86082568513772,
+    "k72modaltest1783771534"
+   ],
+   [
+    4.937635111658064,
+    "c5dfctl9a7e32c6/"
+   ],
+   [
+    5.364555676021626,
+    "z2/"
+   ],
+   [
+    5.723091968753543,
+    "dc43dockerchunks/"
+   ]
+  ],
+  "nonzz_highest": [
+   [
+    14.816788732724962,
+    "D559BROWSERMK1"
+   ],
+   [
+    14.991069031041226,
+    "ANSWER_PHP8A61_BROWSER/"
+   ],
+   [
+    15.430412698987336,
+    "HB58_PUSHW_OK_"
+   ],
+   [
+    15.4966650030365,
+    "MODALT"
+   ],
+   [
+    16.968568848928832,
+    "z[REDACTED"
+   ]
+  ],
+  "benign_highest_scores (false alarms)": [
+   [
+    15.202048501036767,
+    "XTLS/Xray-core/archive/refs/tags/v22.4.18.tar.gz"
+   ],
+   [
+    15.202048501036767,
+    "XTLS/Xray-core/archive/refs/tags/v2.23.9.tar.gz"
+   ],
+   [
+    15.202048501036767,
+    "XTLS/Xray-core/archive/refs/tags/v12.27.10.tar.gz"
+   ],
+   [
+    12.977954801182992,
+    "GyulyVGC/sniffnet/releases/download/v8.14.3/sniffnet-8.14.3-x86_64-unknown-linux-gnu.tar.gz"
+   ],
+   [
+    12.977954801182992,
+    "GyulyVGC/sniffnet/releases/download/v4.10.6/sniffnet_4.10.6_linux_amd64.tar.gz"
+   ],
+   [
+    12.977954801182992,
+    "GyulyVGC/sniffnet/archive/refs/tags/v22.2.3.tar.gz"
+   ],
+   [
+    12.211162095442212,
+    "brettwooldridge/HikariCP/releases/download/v22.11.10/HikariCP-22.11.10-x86_64-unknown-linux-gnu.tar.gz"
+   ],
+   [
+    12.211162095442212,
+    "brettwooldridge/HikariCP/archive/refs/tags/v1.29.8.tar.gz"
+   ],
+   [
+    12.211162095442212,
+    "brettwooldridge/HikariCP/archive/1eb3b4b563136e51ae1c6ad3331e467209ed378b.zip"
+   ],
+   [
+    11.960077572161845,
+    "sxyazi/yazi/archive/refs/tags/v2.8.13.tar.gz"
+   ]
+  ]
+ },
+ "counts": {
+  "pos_zz": 687,
+  "pos_nonzz": 54,
+  "zz_tokens": 809,
+  "benign_train": 18518,
+  "benign_test": 4737
+ }
+}

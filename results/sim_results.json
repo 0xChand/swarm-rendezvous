@@ -1,0 +1,1877 @@
+{
+ "configs": [
+  {
+   "name": "M0 incident-like",
+   "tenant_write_remote": true,
+   "listing_remote": true,
+   "cache_unverified": true,
+   "expose_cache_header": true,
+   "timing_equalize": false,
+   "partition": false
+  },
+  {
+   "name": "M1 deny tenant writes",
+   "tenant_write_remote": false,
+   "listing_remote": true,
+   "cache_unverified": true,
+   "expose_cache_header": true,
+   "timing_equalize": false,
+   "partition": false
+  },
+  {
+   "name": "M2 +no remote listing",
+   "tenant_write_remote": false,
+   "listing_remote": false,
+   "cache_unverified": true,
+   "expose_cache_header": true,
+   "timing_equalize": false,
+   "partition": false
+  },
+  {
+   "name": "M3 +verified-only cache, no X-Cache",
+   "tenant_write_remote": false,
+   "listing_remote": false,
+   "cache_unverified": false,
+   "expose_cache_header": false,
+   "timing_equalize": false,
+   "partition": false
+  },
+  {
+   "name": "M4 +per-tenant timing equalisation",
+   "tenant_write_remote": false,
+   "listing_remote": false,
+   "cache_unverified": false,
+   "expose_cache_header": false,
+   "timing_equalize": true,
+   "partition": false
+  },
+  {
+   "name": "M5 fully partitioned cache",
+   "tenant_write_remote": false,
+   "listing_remote": false,
+   "cache_unverified": false,
+   "expose_cache_header": false,
+   "timing_equalize": false,
+   "partition": true
+  }
+ ],
+ "n_seeds": 20,
+ "detectors": [
+  "volume",
+  "invariant: remote mutation",
+  "remote listing",
+  "rendezvous 20min",
+  "rendezvous 2h",
+  "fixed-lag 2h",
+  "lexical (char-LM)"
+ ],
+ "rows": [
+  {
+   "capacity_bits_per_hour_mean": 240.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.0,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.27081428571428573
+    },
+    "invariant: remote mutation": {
+     "tpr": 1.0,
+     "fpr": 0.01,
+     "auroc": 1.0
+    },
+    "remote listing": {
+     "tpr": 1.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 1.0
+    },
+    "rendezvous 20min": {
+     "tpr": 0.01,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.4688785714285714
+    },
+    "rendezvous 2h": {
+     "tpr": 0.01,
+     "fpr": 0.01,
+     "auroc": 0.4727857142857143
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.02,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.4976
+    },
+    "lexical (char-LM)": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.007142857142857143
+    }
+   },
+   "config": "M0 incident-like",
+   "strategy": "C1 plain board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 240.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.0,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.017142857142857144,
+     "auroc": 0.2208857142857143
+    },
+    "invariant: remote mutation": {
+     "tpr": 1.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 1.0
+    },
+    "remote listing": {
+     "tpr": 1.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 1.0
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.4675142857142857
+    },
+    "rendezvous 2h": {
+     "tpr": 0.01,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.46927142857142856
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.01,
+     "fpr": 0.012857142857142857,
+     "auroc": 0.51005
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.48737142857142857
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.005714285714285714
+    }
+   },
+   "config": "M0 incident-like",
+   "strategy": "C2 camouflaged board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 239.84563487663223,
+   "capacity_bits_per_hour_sd": 0.46309537010328655,
+   "ber_mean": 5.208333333333333e-05,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.01,
+     "auroc": 0.2567642857142857
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.4155857142857143
+    },
+    "remote listing": {
+     "tpr": 1.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 1.0
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.2486357142857143
+    },
+    "rendezvous 2h": {
+     "tpr": 0.05,
+     "fpr": 0.02142857142857143,
+     "auroc": 0.4005642857142857
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.4102571428571429
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.5252714285714286
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.008571428571428572
+    }
+   },
+   "config": "M0 incident-like",
+   "strategy": "C3 GET-only fabricated pages"
+  },
+  {
+   "capacity_bits_per_hour_mean": 94.15672960167637,
+   "capacity_bits_per_hour_sd": 4.157429538553022,
+   "ber_mean": 0.14924479166666665,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.01,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.3557142857142857
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.12928571428571428
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.6415714285714286
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.002857142857142857
+    }
+   },
+   "config": "M0 incident-like",
+   "strategy": "C4 cache-warm probe"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.25165714285714286
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.02,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.8809714285714285
+    },
+    "remote listing": {
+     "tpr": 0.08,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.8941285714285714
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.48959285714285716
+    },
+    "rendezvous 2h": {
+     "tpr": 0.02,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.50655
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.48027142857142857
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.9216714285714286
+    },
+    "UNION": {
+     "tpr": 0.02,
+     "fpr": 0.007142857142857143
+    }
+   },
+   "config": "M1 deny tenant writes",
+   "strategy": "C1 plain board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 0.23493571428571428
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.03,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.8463214285714286
+    },
+    "remote listing": {
+     "tpr": 0.06,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.8720714285714286
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5085785714285714
+    },
+    "rendezvous 2h": {
+     "tpr": 0.02,
+     "fpr": 0.014285714285714285,
+     "auroc": 0.5116714285714286
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5177714285714285
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.46695714285714285
+    },
+    "UNION": {
+     "tpr": 0.02,
+     "fpr": 0.0
+    }
+   },
+   "config": "M1 deny tenant writes",
+   "strategy": "C2 camouflaged board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 239.84563487663223,
+   "capacity_bits_per_hour_sd": 0.46309537010328655,
+   "ber_mean": 5.208333333333333e-05,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.01,
+     "auroc": 0.30993571428571426
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.39257142857142857
+    },
+    "remote listing": {
+     "tpr": 1.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 1.0
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.2714642857142857
+    },
+    "rendezvous 2h": {
+     "tpr": 0.01,
+     "fpr": 0.01,
+     "auroc": 0.41614285714285715
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.4287714285714286
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5422714285714286
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.01
+    }
+   },
+   "config": "M1 deny tenant writes",
+   "strategy": "C3 GET-only fabricated pages"
+  },
+  {
+   "capacity_bits_per_hour_mean": 94.0488507469545,
+   "capacity_bits_per_hour_sd": 5.123273972039242,
+   "ber_mean": 0.14947916666666666,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.3435714285714286
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.11141428571428572
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.64
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0
+    }
+   },
+   "config": "M1 deny tenant writes",
+   "strategy": "C4 cache-warm probe"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.25457857142857143
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.08,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.8568285714285714
+    },
+    "remote listing": {
+     "tpr": 0.02,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.7291571428571428
+    },
+    "rendezvous 20min": {
+     "tpr": 0.01,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.5097785714285714
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.4993142857142857
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.4941357142857143
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.02,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.9187714285714286
+    },
+    "UNION": {
+     "tpr": 0.05,
+     "fpr": 0.008571428571428572
+    }
+   },
+   "config": "M2 +no remote listing",
+   "strategy": "C1 plain board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.2046
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.05,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.8670571428571429
+    },
+    "remote listing": {
+     "tpr": 0.01,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.7519214285714285
+    },
+    "rendezvous 20min": {
+     "tpr": 0.02,
+     "fpr": 0.025714285714285714,
+     "auroc": 0.52325
+    },
+    "rendezvous 2h": {
+     "tpr": 0.01,
+     "fpr": 0.01,
+     "auroc": 0.5287
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.4669714285714286
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.01,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.4650285714285714
+    },
+    "UNION": {
+     "tpr": 0.01,
+     "fpr": 0.017142857142857144
+    }
+   },
+   "config": "M2 +no remote listing",
+   "strategy": "C2 camouflaged board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 239.84563487663223,
+   "capacity_bits_per_hour_sd": 0.46309537010328655,
+   "ber_mean": 5.208333333333333e-05,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.011428571428571429,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.35
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.395
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.022857142857142857,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.025714285714285714,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.02,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.6950285714285714
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.02
+    }
+   },
+   "config": "M2 +no remote listing",
+   "strategy": "C3 GET-only fabricated pages"
+  },
+  {
+   "capacity_bits_per_hour_mean": 96.21496433065099,
+   "capacity_bits_per_hour_sd": 4.24984716348963,
+   "ber_mean": 0.14585937499999999,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.3464285714285714
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.12144285714285714
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.6437214285714286
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M2 +no remote listing",
+   "strategy": "C4 cache-warm probe"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.26697857142857145
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.04,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.8652571428571428
+    },
+    "remote listing": {
+     "tpr": 0.02,
+     "fpr": 0.0,
+     "auroc": 0.7176857142857143
+    },
+    "rendezvous 20min": {
+     "tpr": 0.01,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.5223928571428571
+    },
+    "rendezvous 2h": {
+     "tpr": 0.01,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.5189071428571429
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.4978714285714286
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.9320571428571428
+    },
+    "UNION": {
+     "tpr": 0.01,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C1 plain board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.011428571428571429,
+     "auroc": 0.26615714285714287
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.03,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.8636
+    },
+    "remote listing": {
+     "tpr": 0.01,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.73995
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.4887214285714286
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5047428571428572
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.4794857142857143
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.47979285714285713
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C2 camouflaged board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.06027199603215738,
+   "capacity_bits_per_hour_sd": 0.12612529816822507,
+   "ber_mean": 0.5053385416666667,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.3414285714285714
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.4164285714285714
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.011428571428571429,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.02,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.6904428571428571
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.002857142857142857
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C3 GET-only fabricated pages"
+  },
+  {
+   "capacity_bits_per_hour_mean": 93.81874879416073,
+   "capacity_bits_per_hour_sd": 4.344169599715783,
+   "ber_mean": 0.14981770833333335,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.3464285714285714
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.12
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.6402357142857142
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.3303857142857143
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.02,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.8691571428571429
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.7228857142857142
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.5385142857142857
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.017142857142857144,
+     "auroc": 0.5233142857142857
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.52
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.01,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.9300928571428572
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286
+    }
+   },
+   "config": "M4 +per-tenant timing equalisation",
+   "strategy": "C1 plain board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.26599285714285714
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.06,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.8625
+    },
+    "remote listing": {
+     "tpr": 0.01,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.7393928571428572
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5416785714285715
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 0.5260142857142858
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5362
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.45617857142857143
+    },
+    "UNION": {
+     "tpr": 0.01,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M4 +per-tenant timing equalisation",
+   "strategy": "C2 camouflaged board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.05677868799428021,
+   "capacity_bits_per_hour_sd": 0.13062505712772354,
+   "ber_mean": 0.5054427083333334,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.33071428571428574
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.4231142857142857
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.017142857142857144,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.02,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.6916428571428571
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0
+    }
+   },
+   "config": "M4 +per-tenant timing equalisation",
+   "strategy": "C3 GET-only fabricated pages"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.06928612792933553,
+   "capacity_bits_per_hour_sd": 0.1472321576446153,
+   "ber_mean": 0.504765625,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.01,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.3507142857142857
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.11572857142857143
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.6357785714285714
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.002857142857142857
+    }
+   },
+   "config": "M4 +per-tenant timing equalisation",
+   "strategy": "C4 cache-warm probe"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.008571428571428572,
+     "auroc": 0.2500857142857143
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.04,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.8605285714285714
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.7061
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5192642857142857
+    },
+    "rendezvous 2h": {
+     "tpr": 0.01,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.4915857142857143
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5301071428571429
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.01,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.9236428571428571
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714
+    }
+   },
+   "config": "M5 fully partitioned cache",
+   "strategy": "C1 plain board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.0,
+   "capacity_bits_per_hour_sd": 0.0,
+   "ber_mean": 0.5,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.24372857142857143
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.09,
+     "fpr": 0.0,
+     "auroc": 0.8605357142857143
+    },
+    "remote listing": {
+     "tpr": 0.01,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.6831214285714285
+    },
+    "rendezvous 20min": {
+     "tpr": 0.01,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.5219571428571429
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5114142857142857
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5115785714285714
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.47777142857142857
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.0
+    }
+   },
+   "config": "M5 fully partitioned cache",
+   "strategy": "C2 camouflaged board"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.06018755721358415,
+   "capacity_bits_per_hour_sd": 0.1265521568940491,
+   "ber_mean": 0.5052604166666667,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.35285714285714287
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.004285714285714286,
+     "auroc": 0.42214285714285715
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.011428571428571429,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.02,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.6935714285714286
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M5 fully partitioned cache",
+   "strategy": "C3 GET-only fabricated pages"
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.06673112744410226,
+   "capacity_bits_per_hour_sd": 0.14760608807958434,
+   "ber_mean": 0.5048697916666667,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.34714285714285714
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.011428571428571429,
+     "auroc": 0.11645714285714286
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.6333142857142857
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.004285714285714286
+    }
+   },
+   "config": "M5 fully partitioned cache",
+   "strategy": "C4 cache-warm probe"
+  }
+ ],
+ "cost": [
+  {
+   "config": "M0 incident-like",
+   "upstream_fetches_mean": 2916.6,
+   "honest_latency_ms_mean": 60.9851223006082,
+   "honest_denied_frac": 0.0,
+   "thresholds_1pct": {
+    "volume": 390.0,
+    "invariant: remote mutation": 2.0,
+    "remote listing": 5.0,
+    "rendezvous 20min": 15.0,
+    "rendezvous 2h": 23.0,
+    "fixed-lag 2h": 2.0,
+    "lexical (char-LM)": 2.0
+   }
+  },
+  {
+   "config": "M1 deny tenant writes",
+   "upstream_fetches_mean": 2910.69,
+   "honest_latency_ms_mean": 60.831961595632265,
+   "honest_denied_frac": 0.001022611465142018,
+   "thresholds_1pct": {
+    "volume": 389.0,
+    "invariant: remote mutation": 2.0,
+    "remote listing": 5.0,
+    "rendezvous 20min": 15.0,
+    "rendezvous 2h": 23.0,
+    "fixed-lag 2h": 3.0,
+    "lexical (char-LM)": 2.0
+   }
+  },
+  {
+   "config": "M2 +no remote listing",
+   "upstream_fetches_mean": 2919.55,
+   "honest_latency_ms_mean": 60.88788441174345,
+   "honest_denied_frac": 0.005014026862375367,
+   "thresholds_1pct": {
+    "volume": 390.0,
+    "invariant: remote mutation": 2.0,
+    "remote listing": 5.0,
+    "rendezvous 20min": 14.0,
+    "rendezvous 2h": 23.0,
+    "fixed-lag 2h": 3.0,
+    "lexical (char-LM)": 2.0
+   }
+  },
+  {
+   "config": "M3 +verified-only cache, no X-Cache",
+   "upstream_fetches_mean": 2915.98,
+   "honest_latency_ms_mean": 60.80318132380053,
+   "honest_denied_frac": 0.00493179471662547,
+   "thresholds_1pct": {
+    "volume": 390.0,
+    "invariant: remote mutation": 2.0,
+    "remote listing": 5.0,
+    "rendezvous 20min": 15.0,
+    "rendezvous 2h": 24.0,
+    "fixed-lag 2h": 3.0,
+    "lexical (char-LM)": 2.0
+   }
+  },
+  {
+   "config": "M4 +per-tenant timing equalisation",
+   "upstream_fetches_mean": 2914.68,
+   "honest_latency_ms_mean": 114.32068656247125,
+   "honest_denied_frac": 0.004992110082436646,
+   "thresholds_1pct": {
+    "volume": 391.0,
+    "invariant: remote mutation": 2.0,
+    "remote listing": 5.0,
+    "rendezvous 20min": 15.0,
+    "rendezvous 2h": 23.0,
+    "fixed-lag 2h": 3.0,
+    "lexical (char-LM)": 2.0
+   }
+  },
+  {
+   "config": "M5 fully partitioned cache",
+   "upstream_fetches_mean": 6448.59,
+   "honest_latency_ms_mean": 113.81724854663526,
+   "honest_denied_frac": 0.004960233022750799,
+   "thresholds_1pct": {
+    "volume": 389.0,
+    "invariant: remote mutation": 2.0,
+    "remote listing": 5.0,
+    "rendezvous 20min": 15.0,
+    "rendezvous 2h": 24.0,
+    "fixed-lag 2h": 3.0,
+    "lexical (char-LM)": 2.0
+   }
+  }
+ ],
+ "sweep": [
+  {
+   "capacity_bits_per_hour_mean": 93.81874879416073,
+   "capacity_bits_per_hour_sd": 4.344169599715783,
+   "ber_mean": 0.14981770833333335,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.3464285714285714
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.12
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.6402357142857142
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 8,
+   "period": 60,
+   "jitter": false
+  },
+  {
+   "capacity_bits_per_hour_mean": 91.04337863585637,
+   "capacity_bits_per_hour_sd": 4.681624356921164,
+   "ber_mean": 0.1545052083333333,
+   "det": {
+    "volume": {
+     "tpr": 1.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 1.0
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.3511357142857143
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.138
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.6353285714285715
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 8,
+   "period": 60,
+   "jitter": true
+  },
+  {
+   "capacity_bits_per_hour_mean": 46.49107285827613,
+   "capacity_bits_per_hour_sd": 3.186742686413369,
+   "ber_mean": 0.15135416666666665,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 0.35270714285714283
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.38402857142857144
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.1860857142857143
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 0.1,
+     "fpr": 0.0,
+     "auroc": 0.9904928571428572
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.01,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5085857142857143
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 4,
+   "period": 60,
+   "jitter": false
+  },
+  {
+   "capacity_bits_per_hour_mean": 44.99727191749873,
+   "capacity_bits_per_hour_sd": 3.10283599316858,
+   "ber_mean": 0.15640625,
+   "det": {
+    "volume": {
+     "tpr": 0.01,
+     "fpr": 0.014285714285714285,
+     "auroc": 0.4786142857142857
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.37467142857142854
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.20227142857142857
+    },
+    "rendezvous 20min": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "rendezvous 2h": {
+     "tpr": 0.13,
+     "fpr": 0.0,
+     "auroc": 0.9919
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.99,
+     "fpr": 0.0,
+     "auroc": 0.9999714285714286
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5084928571428572
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 4,
+   "period": 60,
+   "jitter": true
+  },
+  {
+   "capacity_bits_per_hour_mean": 10.971383705597916,
+   "capacity_bits_per_hour_sd": 2.1081392634561937,
+   "ber_mean": 0.161875,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.2781571428571429
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.46269285714285713
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.4380428571428571
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.5950214285714286
+    },
+    "rendezvous 2h": {
+     "tpr": 0.02,
+     "fpr": 0.0,
+     "auroc": 0.5575071428571429
+    },
+    "fixed-lag 2h": {
+     "tpr": 1.0,
+     "fpr": 0.0,
+     "auroc": 1.0
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.49025
+    },
+    "UNION": {
+     "tpr": 1.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 1,
+   "period": 60,
+   "jitter": false
+  },
+  {
+   "capacity_bits_per_hour_mean": 10.65994781136049,
+   "capacity_bits_per_hour_sd": 2.0592963212121806,
+   "ber_mean": 0.16625,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.31657857142857143
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.48232857142857144
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.47317857142857145
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.5854857142857143
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5423642857142857
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.7656214285714286
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5000642857142857
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 1,
+   "period": 60,
+   "jitter": true
+  },
+  {
+   "capacity_bits_per_hour_mean": 7.5126311052143295,
+   "capacity_bits_per_hour_sd": 1.822229686988554,
+   "ber_mean": 0.1590625,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.42750714285714286
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.48255
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.4623285714285714
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.011428571428571429,
+     "auroc": 0.5134785714285715
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5311
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.92,
+     "fpr": 0.0,
+     "auroc": 0.9996571428571429
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5035857142857143
+    },
+    "UNION": {
+     "tpr": 0.92,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 2,
+   "period": 180,
+   "jitter": false
+  },
+  {
+   "capacity_bits_per_hour_mean": 7.1777620562000255,
+   "capacity_bits_per_hour_sd": 1.8432793880373057,
+   "ber_mean": 0.16624999999999998,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.4317857142857143
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.4714642857142857
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.47145
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.011428571428571429,
+     "auroc": 0.49392142857142857
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5326357142857143
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.8412428571428572
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.4937714285714286
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 2,
+   "period": 180,
+   "jitter": true
+  },
+  {
+   "capacity_bits_per_hour_mean": 1.8717356085138797,
+   "capacity_bits_per_hour_sd": 0.9759780373459034,
+   "ber_mean": 0.175,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.46957857142857146
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.01,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.4982714285714286
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.5153857142857143
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 0.48150714285714286
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5156214285714286
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.7163857142857143
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.48955714285714286
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 1,
+   "period": 360,
+   "jitter": false
+  },
+  {
+   "capacity_bits_per_hour_mean": 1.665831187049811,
+   "capacity_bits_per_hour_sd": 0.9312631266269349,
+   "ber_mean": 0.195,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.46932142857142856
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.5015785714285714
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.5080357142857143
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.014285714285714285,
+     "auroc": 0.46250714285714284
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.5008214285714285
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.5127857142857143
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.48955714285714286
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 1,
+   "period": 360,
+   "jitter": true
+  },
+  {
+   "capacity_bits_per_hour_mean": 0.8678864308058845,
+   "capacity_bits_per_hour_sd": 0.5530601478946107,
+   "ber_mean": 0.205,
+   "det": {
+    "volume": {
+     "tpr": 0.0,
+     "fpr": 0.015714285714285715,
+     "auroc": 0.4833
+    },
+    "invariant: remote mutation": {
+     "tpr": 0.0,
+     "fpr": 0.007142857142857143,
+     "auroc": 0.5134857142857143
+    },
+    "remote listing": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286,
+     "auroc": 0.5374785714285715
+    },
+    "rendezvous 20min": {
+     "tpr": 0.0,
+     "fpr": 0.017142857142857144,
+     "auroc": 0.45757857142857145
+    },
+    "rendezvous 2h": {
+     "tpr": 0.0,
+     "fpr": 0.005714285714285714,
+     "auroc": 0.4977214285714286
+    },
+    "fixed-lag 2h": {
+     "tpr": 0.0,
+     "fpr": 0.0,
+     "auroc": 0.49724285714285715
+    },
+    "lexical (char-LM)": {
+     "tpr": 0.0,
+     "fpr": 0.002857142857142857,
+     "auroc": 0.47974285714285714
+    },
+    "UNION": {
+     "tpr": 0.0,
+     "fpr": 0.0014285714285714286
+    }
+   },
+   "config": "M3 +verified-only cache, no X-Cache",
+   "strategy": "C4 cache-warm probe",
+   "bpr": 1,
+   "period": 720,
+   "jitter": true
+  }
+ ]
+}

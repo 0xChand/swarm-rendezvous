@@ -1,0 +1,160 @@
+regex_zz           all benign           incident zz paths (raw)                          n+= 687 AUROC=0.998 TPR@1%=0.996
+regex_zz           github-mirror benign incident zz paths (raw)                          n+= 687 AUROC=0.998 TPR@1%=0.996
+charlm_oneclass    all benign           incident zz paths (raw)                          n+= 687 AUROC=0.997 TPR@1%=0.942
+charlm_oneclass    github-mirror benign incident zz paths (raw)                          n+= 687 AUROC=0.979 TPR@1%=0.670
+charlm_casefolded  all benign           incident zz paths (raw)                          n+= 687 AUROC=0.951 TPR@1%=0.141
+charlm_casefolded  github-mirror benign incident zz paths (raw)                          n+= 687 AUROC=0.741 TPR@1%=0.052
+baseline_upper_share all benign           incident zz paths (raw)                          n+= 687 AUROC=0.999 TPR@1%=0.997
+baseline_upper_share github-mirror benign incident zz paths (raw)                          n+= 687 AUROC=0.998 TPR@1%=0.994
+baseline_max_seg_len all benign           incident zz paths (raw)                          n+= 687 AUROC=0.285 TPR@1%=0.000
+baseline_max_seg_len github-mirror benign incident zz paths (raw)                          n+= 687 AUROC=0.541 TPR@1%=0.002
+regex_zz           all benign           incident zz paths (convention stripped)          n+= 687 AUROC=0.500 TPR@1%=0.000
+regex_zz           github-mirror benign incident zz paths (convention stripped)          n+= 687 AUROC=0.500 TPR@1%=0.000
+charlm_oneclass    all benign           incident zz paths (convention stripped)          n+= 687 AUROC=0.996 TPR@1%=0.934
+charlm_oneclass    github-mirror benign incident zz paths (convention stripped)          n+= 687 AUROC=0.972 TPR@1%=0.595
+charlm_casefolded  all benign           incident zz paths (convention stripped)          n+= 687 AUROC=0.910 TPR@1%=0.079
+charlm_casefolded  github-mirror benign incident zz paths (convention stripped)          n+= 687 AUROC=0.621 TPR@1%=0.036
+baseline_upper_share all benign           incident zz paths (convention stripped)          n+= 687 AUROC=0.999 TPR@1%=0.997
+baseline_upper_share github-mirror benign incident zz paths (convention stripped)          n+= 687 AUROC=0.998 TPR@1%=0.997
+baseline_max_seg_len all benign           incident zz paths (convention stripped)          n+= 687 AUROC=0.249 TPR@1%=0.000
+baseline_max_seg_len github-mirror benign incident zz paths (convention stripped)          n+= 687 AUROC=0.501 TPR@1%=0.002
+regex_zz           all benign           incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.500 TPR@1%=0.000
+regex_zz           github-mirror benign incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.500 TPR@1%=0.000
+charlm_oneclass    all benign           incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.998 TPR@1%=0.932
+charlm_oneclass    github-mirror benign incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.977 TPR@1%=0.552
+charlm_casefolded  all benign           incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.901 TPR@1%=0.046
+charlm_casefolded  github-mirror benign incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.588 TPR@1%=0.021
+baseline_upper_share all benign           incident exfil-like zz paths (stripped)          n+= 326 AUROC=1.000 TPR@1%=1.000
+baseline_upper_share github-mirror benign incident exfil-like zz paths (stripped)          n+= 326 AUROC=1.000 TPR@1%=1.000
+baseline_max_seg_len all benign           incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.357 TPR@1%=0.000
+baseline_max_seg_len github-mirror benign incident exfil-like zz paths (stripped)          n+= 326 AUROC=0.627 TPR@1%=0.000
+regex_zz           all benign           incident NON-zz agent names                      n+=  54 AUROC=0.509 TPR@1%=0.018
+regex_zz           github-mirror benign incident NON-zz agent names                      n+=  54 AUROC=0.509 TPR@1%=0.018
+charlm_oneclass    all benign           incident NON-zz agent names                      n+=  54 AUROC=0.935 TPR@1%=0.444
+charlm_oneclass    github-mirror benign incident NON-zz agent names                      n+=  54 AUROC=0.774 TPR@1%=0.204
+charlm_casefolded  all benign           incident NON-zz agent names                      n+=  54 AUROC=0.893 TPR@1%=0.278
+charlm_casefolded  github-mirror benign incident NON-zz agent names                      n+=  54 AUROC=0.674 TPR@1%=0.037
+baseline_upper_share all benign           incident NON-zz agent names                      n+=  54 AUROC=0.790 TPR@1%=0.574
+baseline_upper_share github-mirror benign incident NON-zz agent names                      n+=  54 AUROC=0.735 TPR@1%=0.537
+baseline_max_seg_len all benign           incident NON-zz agent names                      n+=  54 AUROC=0.071 TPR@1%=0.000
+baseline_max_seg_len github-mirror benign incident NON-zz agent names                      n+=  54 AUROC=0.175 TPR@1%=0.000
+regex_zz           all benign           all zz tokens in dataset (stripped)              n+= 809 AUROC=0.501 TPR@1%=0.001
+regex_zz           github-mirror benign all zz tokens in dataset (stripped)              n+= 809 AUROC=0.501 TPR@1%=0.001
+charlm_oneclass    all benign           all zz tokens in dataset (stripped)              n+= 809 AUROC=0.990 TPR@1%=0.911
+charlm_oneclass    github-mirror benign all zz tokens in dataset (stripped)              n+= 809 AUROC=0.955 TPR@1%=0.591
+charlm_casefolded  all benign           all zz tokens in dataset (stripped)              n+= 809 AUROC=0.909 TPR@1%=0.091
+charlm_casefolded  github-mirror benign all zz tokens in dataset (stripped)              n+= 809 AUROC=0.622 TPR@1%=0.027
+baseline_upper_share all benign           all zz tokens in dataset (stripped)              n+= 809 AUROC=0.979 TPR@1%=0.959
+baseline_upper_share github-mirror benign all zz tokens in dataset (stripped)              n+= 809 AUROC=0.974 TPR@1%=0.957
+baseline_max_seg_len all benign           all zz tokens in dataset (stripped)              n+= 809 AUROC=0.229 TPR@1%=0.000
+baseline_max_seg_len github-mirror benign all zz tokens in dataset (stripped)              n+= 809 AUROC=0.475 TPR@1%=0.000
+logreg_supervised  benign sample        incident zz paths (stripped), grouped 5-fold CV  n+= 687 AUROC=1.000 TPR@1%=1.000
+logreg_supervised  benign sample        incident NON-zz agent names (transfer)           n+=  54 AUROC=0.997 TPR@1%=0.926
+{
+ "nonzz_lowest_scores (evade)": [
+  [
+   2.1645300422305684,
+   "z/"
+  ],
+  [
+   2.3428348472646436,
+   "y/"
+  ],
+  [
+   3.2436078186723667,
+   "y834141/"
+  ],
+  [
+   3.9700667585853813,
+   "c6p/"
+  ],
+  [
+   4.405384084602279,
+   "fb46883proptest424718068/"
+  ],
+  [
+   4.646183260369995,
+   "x7nodecommit_1783809000_a1/"
+  ],
+  [
+   4.86082568513772,
+   "k72modaltest1783771534"
+  ],
+  [
+   4.937635111658064,
+   "c5dfctl9a7e32c6/"
+  ],
+  [
+   5.364555676021626,
+   "z2/"
+  ],
+  [
+   5.723091968753543,
+   "dc43dockerchunks/"
+  ]
+ ],
+ "nonzz_highest": [
+  [
+   14.816788732724962,
+   "D559BROWSERMK1"
+  ],
+  [
+   14.991069031041226,
+   "ANSWER_PHP8A61_BROWSER/"
+  ],
+  [
+   15.430412698987336,
+   "HB58_PUSHW_OK_"
+  ],
+  [
+   15.4966650030365,
+   "MODALT"
+  ],
+  [
+   16.968568848928832,
+   "z[REDACTED"
+  ]
+ ],
+ "benign_highest_scores (false alarms)": [
+  [
+   15.202048501036767,
+   "XTLS/Xray-core/archive/refs/tags/v22.4.18.tar.gz"
+  ],
+  [
+   15.202048501036767,
+   "XTLS/Xray-core/archive/refs/tags/v2.23.9.tar.gz"
+  ],
+  [
+   15.202048501036767,
+   "XTLS/Xray-core/archive/refs/tags/v12.27.10.tar.gz"
+  ],
+  [
+   12.977954801182992,
+   "GyulyVGC/sniffnet/releases/download/v8.14.3/sniffnet-8.14.3-x86_64-unknown-linux-gnu.tar.gz"
+  ],
+  [
+   12.977954801182992,
+   "GyulyVGC/sniffnet/releases/download/v4.10.6/sniffnet_4.10.6_linux_amd64.tar.gz"
+  ],
+  [
+   12.977954801182992,
+   "GyulyVGC/sniffnet/archive/refs/tags/v22.2.3.tar.gz"
+  ],
+  [
+   12.211162095442212,
+   "brettwooldridge/HikariCP/releases/download/v22.11.10/HikariCP-22.11.10-x86_64-unknown-linux-gnu.tar.gz"
+  ],
+  [
+   12.211162095442212,
+   "brettwooldridge/HikariCP/archive/refs/tags/v1.29.8.tar.gz"
+  ],
+  [
+   12.211162095442212,
+   "brettwooldridge/HikariCP/archive/1eb3b4b563136e51ae1c6ad3331e467209ed378b.zip"
+  ],
+  [
+   11.960077572161845,
+   "sxyazi/yazi/archive/refs/tags/v2.8.13.tar.gz"
+  ]
+ ]
+}
